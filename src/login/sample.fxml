@@ -5,44 +5,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Controller">
+<?import java.net.URL?>
+<GridPane alignment="center" hgap="10" styleClass="root" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="login.Controller">
     <padding>
-        <Insets bottom="25" left="25" right="25" top="25" />
+        <Insets bottom="25" left="25" right="25" top="25"/>
     </padding>
 
     <Text id="welcome-text" text="Welcome" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="0">
-      <font>
-         <Font name="Tahoma" size="20.0" />
-      </font>
+        <font>
+            <Font name="Tahoma" size="20.0"/>
+        </font>
     </Text>
 
-    <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-    <TextField fx:id="userName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Label text="User Name:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="userName" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
 
-    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+    <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <PasswordField fx:id="passwordField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
 
-    <HBox alignment="BOTTOM_RIGHT" spacing="10.0" stylesheets="@login.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
-        <Button fx:id="button" text="Login" />
+    <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1"
+          GridPane.rowIndex="4">
+        <Button fx:id="button" text="Login" onAction="#handleSubmitButtonAction"/>
     </HBox>
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
 
+    <Text fx:id="actiontarget" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
 
+    <stylesheets>
+        <URL value="@login.css"></URL>
+    </stylesheets>
 </GridPane>

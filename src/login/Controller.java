@@ -1,31 +1,15 @@
 package login;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 
-import java.net.URL;
-import java.util.Objects;
-import java.util.ResourceBundle;
-
-public class Controller implements Initializable {
+public class Controller {
 
     @FXML
-    protected Button button;
+    private Text actiontarget;
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        if (Objects.nonNull(button)) {
-            button.setOnAction(new EventHandler<ActionEvent>() {
-
-                @Override
-                public void handle(ActionEvent event) {
-                    System.out.println("Event Type: " + event.getEventType());
-                    System.out.println("Hello World");
-                }
-            });
-        }
+    public void handleSubmitButtonAction(ActionEvent actionEvent) {
+        actiontarget.setText("Sign in Success");
     }
 }
